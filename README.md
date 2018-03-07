@@ -39,3 +39,9 @@ I chose not to use any third-party libraries because I did have a specific use f
 2. 2. Save teams with Core Data, use this to display a user's team throughout the app
 3. Add Activity Indicator to Table View footers when network requests are in progress
 4. Style: Create custom activity indicator based off of a baseball diamond
+
+
+
+### Notes:
+
+This is a coding challenge. I own no right to any MLB names, terms, or images.

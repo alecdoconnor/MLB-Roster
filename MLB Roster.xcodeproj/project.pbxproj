@@ -8,22 +8,86 @@
 
 /* Begin PBXBuildFile section */
 		70EA729E204864DE00939C42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA729D204864DE00939C42 /* AppDelegate.swift */; };
-		70EA72A0204864DF00939C42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA729F204864DF00939C42 /* ViewController.swift */; };
 		70EA72A3204864DF00939C42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70EA72A1204864DF00939C42 /* Main.storyboard */; };
 		70EA72A6204864DF00939C42 /* MLB_Roster.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70EA72A4204864DF00939C42 /* MLB_Roster.xcdatamodeld */; };
 		70EA72A8204864DF00939C42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70EA72A7204864DF00939C42 /* Assets.xcassets */; };
 		70EA72AB204864DF00939C42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70EA72A9204864DF00939C42 /* LaunchScreen.storyboard */; };
+		70EA72B62048652A00939C42 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA72B52048652A00939C42 /* Player.swift */; };
+		70EA72B820487DB700939C42 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA72B720487DB700939C42 /* Position.swift */; };
+		70EA72BA204884F300939C42 /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA72B9204884F300939C42 /* Name.swift */; };
+		70EA72BE2048851500939C42 /* BirthInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA72BD2048851500939C42 /* BirthInfo.swift */; };
+		70EA72C3204A03E400939C42 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA72C2204A03E400939C42 /* League.swift */; };
+		70EA72C5204A067100939C42 /* BattingPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA72C4204A067100939C42 /* BattingPosition.swift */; };
+		70EA72C7204A067800939C42 /* ThrowingPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA72C6204A067800939C42 /* ThrowingPosition.swift */; };
+		70EA72CA204A08F500939C42 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA72C9204A08F500939C42 /* Team.swift */; };
+		70EA72CC204CD24E00939C42 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA72CB204CD24D00939C42 /* AsyncOperation.swift */; };
+		70EA72D0204CD56900939C42 /* AsyncState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA72CF204CD56900939C42 /* AsyncState.swift */; };
+		70EA72D3204CD94600939C42 /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA72D2204CD94600939C42 /* NetworkOperation.swift */; };
+		70EA72D5204CEC7A00939C42 /* DiamondActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA72D4204CEC7A00939C42 /* DiamondActivityIndicator.swift */; };
+		70EA72D8204D9E3D00939C42 /* PlayerSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA72D7204D9E3D00939C42 /* PlayerSearchTableViewController.swift */; };
+		70EA72DC204D9EF400939C42 /* TeamListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA72DB204D9EF400939C42 /* TeamListTableViewController.swift */; };
+		70EA72E2204D9F2D00939C42 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 70EA72E1204D9F2D00939C42 /* README.md */; };
+		70EA72E5204DA1FA00939C42 /* PlayerDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA72E3204DA1FA00939C42 /* PlayerDetailTableViewController.swift */; };
+		70EA72EB204DA22D00939C42 /* TeamDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA72E9204DA22D00939C42 /* TeamDetailTableViewController.swift */; };
+		70EA72EC204DA22D00939C42 /* TeamDetailTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70EA72EA204DA22D00939C42 /* TeamDetailTableViewController.xib */; };
+		70EA72F0204DA2BF00939C42 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA72EF204DA2BF00939C42 /* RequestFactory.swift */; };
+		70EA72F2204DB2BA00939C42 /* AlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA72F1204DB2BA00939C42 /* AlertFactory.swift */; };
+		70EA72F4204DFF4C00939C42 /* PlayerPositionSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA72F3204DFF4C00939C42 /* PlayerPositionSelectionTableViewController.swift */; };
+		70EA72F7204E099200939C42 /* PlayerPositionSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA72F6204E099200939C42 /* PlayerPositionSelectionDelegate.swift */; };
+		70EA72F9204E14F400939C42 /* PlayerListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA72F8204E14F400939C42 /* PlayerListTableViewController.swift */; };
+		70EA72FB204E15BB00939C42 /* PlayerListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA72FA204E15BB00939C42 /* PlayerListTableViewCell.swift */; };
+		70EA72FF204F0E5000939C42 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA72FE204F0E5000939C42 /* Stats.swift */; };
+		70EA7303204F100D00939C42 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA7302204F100D00939C42 /* Level.swift */; };
+		70EA7306204F11F500939C42 /* PitchingStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA7305204F11F500939C42 /* PitchingStats.swift */; };
+		70EA7308204F120500939C42 /* BattingStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA7307204F120500939C42 /* BattingStats.swift */; };
+		70EA730A204F140700939C42 /* PlayerDetailHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA7309204F140700939C42 /* PlayerDetailHeaderTableViewCell.swift */; };
+		70EA730C204F1D4200939C42 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA730B204F1D4200939C42 /* ImageCache.swift */; };
+		70EA730E204F333700939C42 /* StatCalculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA730D204F333700939C42 /* StatCalculations.swift */; };
+		70EA7312204F40C200939C42 /* PersistentTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA7311204F40C200939C42 /* PersistentTeam.swift */; };
+		70EA7314204F40C900939C42 /* PersistentPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA7313204F40C900939C42 /* PersistentPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		70EA729A204864DE00939C42 /* MLB Roster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MLB Roster.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70EA729D204864DE00939C42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		70EA729F204864DF00939C42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		70EA72A2204864DF00939C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		70EA72A5204864DF00939C42 /* MLB_Roster.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MLB_Roster.xcdatamodel; sourceTree = "<group>"; };
 		70EA72A7204864DF00939C42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70EA72AA204864DF00939C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70EA72AC204864DF00939C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70EA72B52048652A00939C42 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		70EA72B720487DB700939C42 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		70EA72B9204884F300939C42 /* Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Name.swift; sourceTree = "<group>"; };
+		70EA72BD2048851500939C42 /* BirthInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthInfo.swift; sourceTree = "<group>"; };
+		70EA72C2204A03E400939C42 /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
+		70EA72C4204A067100939C42 /* BattingPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattingPosition.swift; sourceTree = "<group>"; };
+		70EA72C6204A067800939C42 /* ThrowingPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThrowingPosition.swift; sourceTree = "<group>"; };
+		70EA72C9204A08F500939C42 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		70EA72CB204CD24D00939C42 /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
+		70EA72CF204CD56900939C42 /* AsyncState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncState.swift; sourceTree = "<group>"; };
+		70EA72D2204CD94600939C42 /* NetworkOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkOperation.swift; sourceTree = "<group>"; };
+		70EA72D4204CEC7A00939C42 /* DiamondActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiamondActivityIndicator.swift; sourceTree = "<group>"; };
+		70EA72D7204D9E3D00939C42 /* PlayerSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSearchTableViewController.swift; sourceTree = "<group>"; };
+		70EA72DB204D9EF400939C42 /* TeamListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListTableViewController.swift; sourceTree = "<group>"; };
+		70EA72E1204D9F2D00939C42 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		70EA72E3204DA1FA00939C42 /* PlayerDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailTableViewController.swift; sourceTree = "<group>"; };
+		70EA72E9204DA22D00939C42 /* TeamDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailTableViewController.swift; sourceTree = "<group>"; };
+		70EA72EA204DA22D00939C42 /* TeamDetailTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamDetailTableViewController.xib; sourceTree = "<group>"; };
+		70EA72EF204DA2BF00939C42 /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
+		70EA72F1204DB2BA00939C42 /* AlertFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertFactory.swift; sourceTree = "<group>"; };
+		70EA72F3204DFF4C00939C42 /* PlayerPositionSelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPositionSelectionTableViewController.swift; sourceTree = "<group>"; };
+		70EA72F6204E099200939C42 /* PlayerPositionSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPositionSelectionDelegate.swift; sourceTree = "<group>"; };
+		70EA72F8204E14F400939C42 /* PlayerListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerListTableViewController.swift; sourceTree = "<group>"; };
+		70EA72FA204E15BB00939C42 /* PlayerListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerListTableViewCell.swift; sourceTree = "<group>"; };
+		70EA72FE204F0E5000939C42 /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
+		70EA7302204F100D00939C42 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		70EA7305204F11F500939C42 /* PitchingStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchingStats.swift; sourceTree = "<group>"; };
+		70EA7307204F120500939C42 /* BattingStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattingStats.swift; sourceTree = "<group>"; };
+		70EA7309204F140700939C42 /* PlayerDetailHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		70EA730B204F1D4200939C42 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		70EA730D204F333700939C42 /* StatCalculations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatCalculations.swift; sourceTree = "<group>"; };
+		70EA7311204F40C200939C42 /* PersistentTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentTeam.swift; sourceTree = "<group>"; };
+		70EA7313204F40C900939C42 /* PersistentPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +104,7 @@
 		70EA7291204864DE00939C42 = {
 			isa = PBXGroup;
 			children = (
+				70EA72E1204D9F2D00939C42 /* README.md */,
 				70EA729C204864DE00939C42 /* MLB Roster */,
 				70EA729B204864DE00939C42 /* Products */,
 			);
@@ -57,7 +122,9 @@
 			isa = PBXGroup;
 			children = (
 				70EA729D204864DE00939C42 /* AppDelegate.swift */,
-				70EA729F204864DF00939C42 /* ViewController.swift */,
+				70EA72B2204864FC00939C42 /* Model */,
+				70EA72B32048650700939C42 /* View */,
+				70EA72B42048650F00939C42 /* Controller */,
 				70EA72A1204864DF00939C42 /* Main.storyboard */,
 				70EA72A7204864DF00939C42 /* Assets.xcassets */,
 				70EA72A9204864DF00939C42 /* LaunchScreen.storyboard */,
@@ -65,6 +132,219 @@
 				70EA72A4204864DF00939C42 /* MLB_Roster.xcdatamodeld */,
 			);
 			path = "MLB Roster";
+			sourceTree = "<group>";
+		};
+		70EA72B2204864FC00939C42 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				70EA7310204F40B700939C42 /* Persistency */,
+				70EA72C8204A08E600939C42 /* Team */,
+				70EA72BF2048851F00939C42 /* Player */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		70EA72B32048650700939C42 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				70EA72D6204D9D9400939C42 /* Utilities */,
+				70EA72E0204D9F0A00939C42 /* Teams */,
+				70EA72DF204D9F0200939C42 /* Players */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		70EA72B42048650F00939C42 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				70EA730B204F1D4200939C42 /* ImageCache.swift */,
+				70EA730D204F333700939C42 /* StatCalculations.swift */,
+				70EA730F204F368800939C42 /* Factories */,
+				70EA72CD204CD55300939C42 /* Operations */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		70EA72BF2048851F00939C42 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				70EA72B52048652A00939C42 /* Player.swift */,
+				70EA72FE204F0E5000939C42 /* Stats.swift */,
+				70EA7304204F101400939C42 /* Stats Extension Types */,
+				70EA72C02048852800939C42 /* Player Extension Types */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		70EA72C02048852800939C42 /* Player Extension Types */ = {
+			isa = PBXGroup;
+			children = (
+				70EA72B9204884F300939C42 /* Name.swift */,
+				70EA72BD2048851500939C42 /* BirthInfo.swift */,
+				70EA72C1204A03D500939C42 /* Enums */,
+			);
+			path = "Player Extension Types";
+			sourceTree = "<group>";
+		};
+		70EA72C1204A03D500939C42 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				70EA72B720487DB700939C42 /* Position.swift */,
+				70EA72C4204A067100939C42 /* BattingPosition.swift */,
+				70EA72C6204A067800939C42 /* ThrowingPosition.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		70EA72C8204A08E600939C42 /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				70EA72C9204A08F500939C42 /* Team.swift */,
+				70EA72C2204A03E400939C42 /* League.swift */,
+			);
+			path = Team;
+			sourceTree = "<group>";
+		};
+		70EA72CD204CD55300939C42 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				70EA72CE204CD55D00939C42 /* Async */,
+				70EA72D1204CD93000939C42 /* NetworkOperation */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		70EA72CE204CD55D00939C42 /* Async */ = {
+			isa = PBXGroup;
+			children = (
+				70EA72CB204CD24D00939C42 /* AsyncOperation.swift */,
+				70EA72CF204CD56900939C42 /* AsyncState.swift */,
+			);
+			path = Async;
+			sourceTree = "<group>";
+		};
+		70EA72D1204CD93000939C42 /* NetworkOperation */ = {
+			isa = PBXGroup;
+			children = (
+				70EA72D2204CD94600939C42 /* NetworkOperation.swift */,
+			);
+			path = NetworkOperation;
+			sourceTree = "<group>";
+		};
+		70EA72D6204D9D9400939C42 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				70EA72D4204CEC7A00939C42 /* DiamondActivityIndicator.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		70EA72DF204D9F0200939C42 /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				70EA72E7204DA1FF00939C42 /* Search List */,
+				70EA72E8204DA20700939C42 /* Detailed View */,
+			);
+			path = Players;
+			sourceTree = "<group>";
+		};
+		70EA72E0204D9F0A00939C42 /* Teams */ = {
+			isa = PBXGroup;
+			children = (
+				70EA72EE204DA24000939C42 /* Complete List */,
+				70EA72ED204DA23900939C42 /* Detailed View */,
+			);
+			path = Teams;
+			sourceTree = "<group>";
+		};
+		70EA72E7204DA1FF00939C42 /* Search List */ = {
+			isa = PBXGroup;
+			children = (
+				70EA72FD204E17EB00939C42 /* Search */,
+				70EA72FC204E17DF00939C42 /* Player List */,
+			);
+			path = "Search List";
+			sourceTree = "<group>";
+		};
+		70EA72E8204DA20700939C42 /* Detailed View */ = {
+			isa = PBXGroup;
+			children = (
+				70EA72E3204DA1FA00939C42 /* PlayerDetailTableViewController.swift */,
+				70EA7309204F140700939C42 /* PlayerDetailHeaderTableViewCell.swift */,
+			);
+			path = "Detailed View";
+			sourceTree = "<group>";
+		};
+		70EA72ED204DA23900939C42 /* Detailed View */ = {
+			isa = PBXGroup;
+			children = (
+				70EA72E9204DA22D00939C42 /* TeamDetailTableViewController.swift */,
+				70EA72EA204DA22D00939C42 /* TeamDetailTableViewController.xib */,
+			);
+			path = "Detailed View";
+			sourceTree = "<group>";
+		};
+		70EA72EE204DA24000939C42 /* Complete List */ = {
+			isa = PBXGroup;
+			children = (
+				70EA72DB204D9EF400939C42 /* TeamListTableViewController.swift */,
+			);
+			path = "Complete List";
+			sourceTree = "<group>";
+		};
+		70EA72F5204E097500939C42 /* Position Selection */ = {
+			isa = PBXGroup;
+			children = (
+				70EA72F6204E099200939C42 /* PlayerPositionSelectionDelegate.swift */,
+				70EA72F3204DFF4C00939C42 /* PlayerPositionSelectionTableViewController.swift */,
+			);
+			path = "Position Selection";
+			sourceTree = "<group>";
+		};
+		70EA72FC204E17DF00939C42 /* Player List */ = {
+			isa = PBXGroup;
+			children = (
+				70EA72F8204E14F400939C42 /* PlayerListTableViewController.swift */,
+				70EA72FA204E15BB00939C42 /* PlayerListTableViewCell.swift */,
+			);
+			path = "Player List";
+			sourceTree = "<group>";
+		};
+		70EA72FD204E17EB00939C42 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				70EA72D7204D9E3D00939C42 /* PlayerSearchTableViewController.swift */,
+				70EA72F5204E097500939C42 /* Position Selection */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		70EA7304204F101400939C42 /* Stats Extension Types */ = {
+			isa = PBXGroup;
+			children = (
+				70EA7302204F100D00939C42 /* Level.swift */,
+				70EA7305204F11F500939C42 /* PitchingStats.swift */,
+				70EA7307204F120500939C42 /* BattingStats.swift */,
+			);
+			path = "Stats Extension Types";
+			sourceTree = "<group>";
+		};
+		70EA730F204F368800939C42 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				70EA72EF204DA2BF00939C42 /* RequestFactory.swift */,
+				70EA72F1204DB2BA00939C42 /* AlertFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		70EA7310204F40B700939C42 /* Persistency */ = {
+			isa = PBXGroup;
+			children = (
+				70EA7311204F40C200939C42 /* PersistentTeam.swift */,
+				70EA7313204F40C900939C42 /* PersistentPlayer.swift */,
+			);
+			path = Persistency;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,7 +408,9 @@
 			files = (
 				70EA72AB204864DF00939C42 /* LaunchScreen.storyboard in Resources */,
 				70EA72A8204864DF00939C42 /* Assets.xcassets in Resources */,
+				70EA72E2204D9F2D00939C42 /* README.md in Resources */,
 				70EA72A3204864DF00939C42 /* Main.storyboard in Resources */,
+				70EA72EC204DA22D00939C42 /* TeamDetailTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,9 +421,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70EA72A0204864DF00939C42 /* ViewController.swift in Sources */,
+				70EA730C204F1D4200939C42 /* ImageCache.swift in Sources */,
+				70EA7303204F100D00939C42 /* Level.swift in Sources */,
+				70EA72D8204D9E3D00939C42 /* PlayerSearchTableViewController.swift in Sources */,
+				70EA72F2204DB2BA00939C42 /* AlertFactory.swift in Sources */,
+				70EA730A204F140700939C42 /* PlayerDetailHeaderTableViewCell.swift in Sources */,
+				70EA72F0204DA2BF00939C42 /* RequestFactory.swift in Sources */,
+				70EA72E5204DA1FA00939C42 /* PlayerDetailTableViewController.swift in Sources */,
+				70EA7312204F40C200939C42 /* PersistentTeam.swift in Sources */,
+				70EA72F4204DFF4C00939C42 /* PlayerPositionSelectionTableViewController.swift in Sources */,
+				70EA72F9204E14F400939C42 /* PlayerListTableViewController.swift in Sources */,
+				70EA72DC204D9EF400939C42 /* TeamListTableViewController.swift in Sources */,
+				70EA72BA204884F300939C42 /* Name.swift in Sources */,
+				70EA72C7204A067800939C42 /* ThrowingPosition.swift in Sources */,
+				70EA72C3204A03E400939C42 /* League.swift in Sources */,
+				70EA72B62048652A00939C42 /* Player.swift in Sources */,
+				70EA7306204F11F500939C42 /* PitchingStats.swift in Sources */,
+				70EA7308204F120500939C42 /* BattingStats.swift in Sources */,
+				70EA72D5204CEC7A00939C42 /* DiamondActivityIndicator.swift in Sources */,
+				70EA72FB204E15BB00939C42 /* PlayerListTableViewCell.swift in Sources */,
+				70EA7314204F40C900939C42 /* PersistentPlayer.swift in Sources */,
+				70EA72F7204E099200939C42 /* PlayerPositionSelectionDelegate.swift in Sources */,
+				70EA72D0204CD56900939C42 /* AsyncState.swift in Sources */,
+				70EA72D3204CD94600939C42 /* NetworkOperation.swift in Sources */,
+				70EA730E204F333700939C42 /* StatCalculations.swift in Sources */,
 				70EA729E204864DE00939C42 /* AppDelegate.swift in Sources */,
+				70EA72C5204A067100939C42 /* BattingPosition.swift in Sources */,
+				70EA72B820487DB700939C42 /* Position.swift in Sources */,
+				70EA72CA204A08F500939C42 /* Team.swift in Sources */,
 				70EA72A6204864DF00939C42 /* MLB_Roster.xcdatamodeld in Sources */,
+				70EA72FF204F0E5000939C42 /* Stats.swift in Sources */,
+				70EA72EB204DA22D00939C42 /* TeamDetailTableViewController.swift in Sources */,
+				70EA72CC204CD24E00939C42 /* AsyncOperation.swift in Sources */,
+				70EA72BE2048851500939C42 /* BirthInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

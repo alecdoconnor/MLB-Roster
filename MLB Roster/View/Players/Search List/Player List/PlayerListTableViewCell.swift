@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class PlayerListTableViewCell: UITableViewCell {
+    
+    var context: NSManagedObjectContext!
 
     @IBOutlet weak var headshotImageView: UIImageView!
     @IBOutlet weak var headlineLabel: UILabel!
@@ -28,8 +31,7 @@ class PlayerListTableViewCell: UITableViewCell {
             // Update basic player data
             headlineLabel.text = player.name.full
             primarySubheadLabel.text = player.position.stringValue()
-            print("Update team name after Core Data")
-            secondarySubheadLabel.text = "Team Name"
+            secondarySubheadLabel.text = getTeamName(forTeamID: player.teamId)
             
             // Update the image
             headshotImageView.image = nil
@@ -53,12 +55,43 @@ class PlayerListTableViewCell: UITableViewCell {
         
     }
     
+    func getTeamName(forTeamID id: Int) -> String {
+        let fetchRequest: NSFetchRequest<PersistentTeam> = PersistentTeam.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "id == %d", id)
+        fetchRequest.fetchLimit = 1
+        
+        var team: PersistentTeam?
+        
+        do {
+            // Execute the fetch request and save the first team to a local var
+            let fetchResults = try context.fetch(fetchRequest)
+            if fetchResults.count > 0,
+                let fetchedTeam = fetchResults.first {
+                team = fetchedTeam
+            }
+        } catch {
+            print("Player cell unable to gather team: \(error)")
+        }
+        
+        if let team = team,
+            let teamName = team.fullName {
+            // Display this label
+            secondarySubheadLabel.isHidden = false
+            
+            return teamName
+            
+        } else {
+            // Hide this label
+            secondarySubheadLabel.isHidden = true
+            
+            return ""
+            
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        // After adding core data, we will have use for the SecondarySubheadLabel
-        // Team names for players will be grabbed with a fetch request
-        secondarySubheadLabel.isHidden = true
+        context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     }
 
 }

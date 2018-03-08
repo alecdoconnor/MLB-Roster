@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		707D0C7A2050D85300F0BA87 /* SavePersistentTeamsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707D0C792050D85300F0BA87 /* SavePersistentTeamsOperation.swift */; };
+		707D0C7C2050D85B00F0BA87 /* CoreDataOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707D0C7B2050D85B00F0BA87 /* CoreDataOperation.swift */; };
+		707D0C7E2050E13000F0BA87 /* SavePersistentPlayersOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707D0C7D2050E13000F0BA87 /* SavePersistentPlayersOperation.swift */; };
+		707D0C812050F4BC00F0BA87 /* CoreDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707D0C802050F4BC00F0BA87 /* CoreDataTableViewController.swift */; };
+		707D0C852050F57D00F0BA87 /* MLB_Roster.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 707D0C822050F57D00F0BA87 /* MLB_Roster.xcdatamodeld */; };
 		70EA729E204864DE00939C42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA729D204864DE00939C42 /* AppDelegate.swift */; };
 		70EA72A3204864DF00939C42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70EA72A1204864DF00939C42 /* Main.storyboard */; };
-		70EA72A6204864DF00939C42 /* MLB_Roster.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70EA72A4204864DF00939C42 /* MLB_Roster.xcdatamodeld */; };
 		70EA72A8204864DF00939C42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70EA72A7204864DF00939C42 /* Assets.xcassets */; };
 		70EA72AB204864DF00939C42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70EA72A9204864DF00939C42 /* LaunchScreen.storyboard */; };
 		70EA72B62048652A00939C42 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA72B52048652A00939C42 /* Player.swift */; };
@@ -48,10 +52,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		707D0C792050D85300F0BA87 /* SavePersistentTeamsOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePersistentTeamsOperation.swift; sourceTree = "<group>"; };
+		707D0C7B2050D85B00F0BA87 /* CoreDataOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataOperation.swift; sourceTree = "<group>"; };
+		707D0C7D2050E13000F0BA87 /* SavePersistentPlayersOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePersistentPlayersOperation.swift; sourceTree = "<group>"; };
+		707D0C802050F4BC00F0BA87 /* CoreDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTableViewController.swift; sourceTree = "<group>"; };
+		707D0C832050F57D00F0BA87 /* MLB_Roster_1.1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MLB_Roster_1.1.xcdatamodel; sourceTree = "<group>"; };
+		707D0C842050F57D00F0BA87 /* MLB_Roster.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MLB_Roster.xcdatamodel; sourceTree = "<group>"; };
 		70EA729A204864DE00939C42 /* MLB Roster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MLB Roster.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70EA729D204864DE00939C42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70EA72A2204864DF00939C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		70EA72A5204864DF00939C42 /* MLB_Roster.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MLB_Roster.xcdatamodel; sourceTree = "<group>"; };
 		70EA72A7204864DF00939C42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70EA72AA204864DF00939C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70EA72AC204864DF00939C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,6 +110,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		707D0C782050D82700F0BA87 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				707D0C7B2050D85B00F0BA87 /* CoreDataOperation.swift */,
+				707D0C7D2050E13000F0BA87 /* SavePersistentPlayersOperation.swift */,
+				707D0C792050D85300F0BA87 /* SavePersistentTeamsOperation.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
 		70EA7291204864DE00939C42 = {
 			isa = PBXGroup;
 			children = (
@@ -129,7 +148,6 @@
 				70EA72A7204864DF00939C42 /* Assets.xcassets */,
 				70EA72A9204864DF00939C42 /* LaunchScreen.storyboard */,
 				70EA72AC204864DF00939C42 /* Info.plist */,
-				70EA72A4204864DF00939C42 /* MLB_Roster.xcdatamodeld */,
 			);
 			path = "MLB Roster";
 			sourceTree = "<group>";
@@ -208,6 +226,7 @@
 		70EA72CD204CD55300939C42 /* Operations */ = {
 			isa = PBXGroup;
 			children = (
+				707D0C782050D82700F0BA87 /* Core Data */,
 				70EA72CE204CD55D00939C42 /* Async */,
 				70EA72D1204CD93000939C42 /* NetworkOperation */,
 			);
@@ -235,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				70EA72D4204CEC7A00939C42 /* DiamondActivityIndicator.swift */,
+				707D0C802050F4BC00F0BA87 /* CoreDataTableViewController.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -341,6 +361,7 @@
 		70EA7310204F40B700939C42 /* Persistency */ = {
 			isa = PBXGroup;
 			children = (
+				707D0C822050F57D00F0BA87 /* MLB_Roster.xcdatamodeld */,
 				70EA7311204F40C200939C42 /* PersistentTeam.swift */,
 				70EA7313204F40C900939C42 /* PersistentPlayer.swift */,
 			);
@@ -423,11 +444,13 @@
 			files = (
 				70EA730C204F1D4200939C42 /* ImageCache.swift in Sources */,
 				70EA7303204F100D00939C42 /* Level.swift in Sources */,
+				707D0C7C2050D85B00F0BA87 /* CoreDataOperation.swift in Sources */,
 				70EA72D8204D9E3D00939C42 /* PlayerSearchTableViewController.swift in Sources */,
 				70EA72F2204DB2BA00939C42 /* AlertFactory.swift in Sources */,
 				70EA730A204F140700939C42 /* PlayerDetailHeaderTableViewCell.swift in Sources */,
 				70EA72F0204DA2BF00939C42 /* RequestFactory.swift in Sources */,
 				70EA72E5204DA1FA00939C42 /* PlayerDetailTableViewController.swift in Sources */,
+				707D0C7E2050E13000F0BA87 /* SavePersistentPlayersOperation.swift in Sources */,
 				70EA7312204F40C200939C42 /* PersistentTeam.swift in Sources */,
 				70EA72F4204DFF4C00939C42 /* PlayerPositionSelectionTableViewController.swift in Sources */,
 				70EA72F9204E14F400939C42 /* PlayerListTableViewController.swift in Sources */,
@@ -439,6 +462,7 @@
 				70EA7306204F11F500939C42 /* PitchingStats.swift in Sources */,
 				70EA7308204F120500939C42 /* BattingStats.swift in Sources */,
 				70EA72D5204CEC7A00939C42 /* DiamondActivityIndicator.swift in Sources */,
+				707D0C7A2050D85300F0BA87 /* SavePersistentTeamsOperation.swift in Sources */,
 				70EA72FB204E15BB00939C42 /* PlayerListTableViewCell.swift in Sources */,
 				70EA7314204F40C900939C42 /* PersistentPlayer.swift in Sources */,
 				70EA72F7204E099200939C42 /* PlayerPositionSelectionDelegate.swift in Sources */,
@@ -446,10 +470,11 @@
 				70EA72D3204CD94600939C42 /* NetworkOperation.swift in Sources */,
 				70EA730E204F333700939C42 /* StatCalculations.swift in Sources */,
 				70EA729E204864DE00939C42 /* AppDelegate.swift in Sources */,
+				707D0C812050F4BC00F0BA87 /* CoreDataTableViewController.swift in Sources */,
 				70EA72C5204A067100939C42 /* BattingPosition.swift in Sources */,
 				70EA72B820487DB700939C42 /* Position.swift in Sources */,
 				70EA72CA204A08F500939C42 /* Team.swift in Sources */,
-				70EA72A6204864DF00939C42 /* MLB_Roster.xcdatamodeld in Sources */,
+				707D0C852050F57D00F0BA87 /* MLB_Roster.xcdatamodeld in Sources */,
 				70EA72FF204F0E5000939C42 /* Stats.swift in Sources */,
 				70EA72EB204DA22D00939C42 /* TeamDetailTableViewController.swift in Sources */,
 				70EA72CC204CD24E00939C42 /* AsyncOperation.swift in Sources */,
@@ -593,6 +618,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24LJMF7J23;
 				INFOPLIST_FILE = "MLB Roster/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alecoconnor.MLB-Roster";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -608,6 +634,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24LJMF7J23;
 				INFOPLIST_FILE = "MLB Roster/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alecoconnor.MLB-Roster";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -640,12 +667,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		70EA72A4204864DF00939C42 /* MLB_Roster.xcdatamodeld */ = {
+		707D0C822050F57D00F0BA87 /* MLB_Roster.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				70EA72A5204864DF00939C42 /* MLB_Roster.xcdatamodel */,
+				707D0C832050F57D00F0BA87 /* MLB_Roster_1.1.xcdatamodel */,
+				707D0C842050F57D00F0BA87 /* MLB_Roster.xcdatamodel */,
 			);
-			currentVersion = 70EA72A5204864DF00939C42 /* MLB_Roster.xcdatamodel */;
+			currentVersion = 707D0C832050F57D00F0BA87 /* MLB_Roster_1.1.xcdatamodel */;
 			path = MLB_Roster.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

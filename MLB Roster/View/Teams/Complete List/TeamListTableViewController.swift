@@ -7,93 +7,40 @@
 //
 
 import UIKit
+import CoreData
 
-class TeamListTableViewController: UITableViewController {
+class TeamListTableViewController: CoreDataTableViewController {
     
-    var teams = [Team]() {
-        didSet {
-            americanTeams = teams.filter { $0.league == League.American }.sorted { $0.name < $1.name }
-            nationalTeams = teams.filter { $0.league == League.National }.sorted { $0.name < $1.name }
-        }
-    }
+    var context: NSManagedObjectContext!
     
-    var americanTeams = [Team]()
-    var nationalTeams = [Team]()
-    
-    var teamOperation: NetworkOperation<[Team]>!
-    var queue = OperationQueue()
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "MLB Teams"
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        refreshData()
+        createFetchRequestController()
     }
     
-    // MARK: - Data accessors
-    
-    func refreshData() {
+    func createFetchRequestController() {
         
-        // Gather URLRequest for data task
-        let request = RequestFactory.getTeams()
+        self.context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
-        // Create network operation for data task
-        teamOperation = NetworkOperation<[Team]>(request: request)
-        teamOperation!.completionBlock = { [weak self] in
-            
-            // Verify results of operation
-            guard let newTeams = self?.teamOperation?.response else {
-                // No teams provided from NetworkOperation, provide error alert
-                DispatchQueue.main.async {
-                    let alert = AlertFactory.customError(title: "There was a problem loading the teams", message: "Please try again")
-                    self?.present(alert, animated: true, completion: nil)
-                }
-                return
-            }
-            
-            // Store Results and Reload Table
-            self?.teams = newTeams
-            DispatchQueue.main.async {
-                self?.tableView.reloadData()
-            }
-        }
-        queue.addOperation(teamOperation)
+        // Define the fetch request that powers this table view
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "PersistentTeam")
+        let positionSortDescriptor = NSSortDescriptor(key: "leagueString", ascending: true)
+        let nameSortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        fetchRequest.sortDescriptors = [positionSortDescriptor, nameSortDescriptor]
+        
+        self.fetchedResultsController = NSFetchedResultsController<NSFetchRequestResult>(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "leagueString", cacheName: nil)
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
-    }
-    
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 0:
-            return "American"
-        case 1:
-            return "National"
-        default:
-            return ""
-        }
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            return americanTeams.count
-        case 1:
-            return nationalTeams.count
-        default:
-            return 0
-        }
-    }
-
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // Create a reference copy of the relative team
-        let team = (indexPath.section == 0) ? americanTeams[indexPath.row] : nationalTeams[indexPath.row]
+        let team = fetchedResultsController.object(at: indexPath) as! PersistentTeam
         
         // Dequeue cell and populate data
         let cell = tableView.dequeueReusableCell(withIdentifier: "TeamListTableViewCell", for: indexPath)
@@ -109,7 +56,8 @@ class TeamListTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         
         // Create a reference copy of the relative team
-        let team = (indexPath.section == 0) ? americanTeams[indexPath.row] : nationalTeams[indexPath.row]
+        let persistentTeam = fetchedResultsController.object(at: indexPath) as! PersistentTeam
+        let team = persistentTeam.returnTeam()
         
         // Open detailed team view
         let teamDetailTableViewController = TeamDetailTableViewController(withTeam: team)
@@ -121,17 +69,5 @@ class TeamListTableViewController: UITableViewController {
         // Show a blank view instead of a continuous line of empty cells, before data is loaded
         return UIView()
     }
-
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

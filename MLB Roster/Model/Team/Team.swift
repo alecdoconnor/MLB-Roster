@@ -40,4 +40,13 @@ struct Team: Decodable {
         league = League(rawValue: rawLeague) ?? .Unknown
     }
     
+    init(id: Int, city: String, name: String, abbreviation: String, fullName: String, league: League) {
+        self.id = id
+        self.city = city
+        self.name = name
+        self.abbreviation = abbreviation
+        self.fullName = fullName
+        self.league = league
+    }
+    
 }

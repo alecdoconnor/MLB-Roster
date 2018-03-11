@@ -22,7 +22,7 @@ class SavePersistentTeamsOperation: CoreDataOperation {
         
     }
     
-    override func start() {
+    override func main() {
         
         // Check if this operation is still valid
         guard !isCancelled else {
@@ -42,14 +42,8 @@ class SavePersistentTeamsOperation: CoreDataOperation {
             print("SavePersistentTeamsOperation completed early due to invalid [Team]")
             return
         }
+        
         self.teams = teams
-        
-        // Continue execution of this operation
-        main()
-        
-    }
-    
-    override func main() {
         
         // Check if this operation is still valid
         guard !isCancelled else {

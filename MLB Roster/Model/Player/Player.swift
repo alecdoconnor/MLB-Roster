@@ -86,5 +86,22 @@ struct Player: Decodable {
         birthInfo = BirthInfo(date: date, city: city, state: state, country: country)
     }
     
+    
+    // Typical struct initializer, used to convert PersistentPlayer to Player
+    init(id: Int, name: Name, battingPosition: BattingPosition, throwingPosition: ThrowingPosition, teamId: Int, birthInfo: BirthInfo, height: UInt8, weight: Int, position: Position, number: UInt8, headshot: URL, isPitcher: Bool) {
+        self.id = id
+        self.name = name
+        self.battingPosition = battingPosition
+        self.throwingPosition = throwingPosition
+        self.teamId = teamId
+        self.birthInfo = birthInfo
+        self.height = height
+        self.weight = weight
+        self.position = position
+        self.number = number
+        self.headshot = headshot
+        self.isPitcher = isPitcher
+    }
+    
 }
 

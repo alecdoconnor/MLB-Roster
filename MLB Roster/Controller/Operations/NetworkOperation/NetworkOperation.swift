@@ -27,6 +27,7 @@ class NetworkOperation<T: Decodable>: AsyncOperation {
     // Initialize network operation with a URLRequest and an expected generic type
     init(request: URLRequest) {
         self.request = request
+        super.init()
     }
     
     

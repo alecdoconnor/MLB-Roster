@@ -14,10 +14,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var teamOperation: NetworkOperation<[Team]>!
+    var playerOperation: NetworkOperation<[Player]>!
+    
+    let queue = OperationQueue()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        loadData()
+        
         return true
+    }
+    
+    func loadData() {
+        
+        
+        // Gather URLRequest for data task
+        let teamsRequest = RequestFactory.getTeams()
+        // Create network operation for data task
+        teamOperation = NetworkOperation<[Team]>(request: teamsRequest)
+        
+        // Create an operation to save the teams with Core Data
+        let savePersistentTeamsOperation = SavePersistentTeamsOperation()
+        savePersistentTeamsOperation.addDependency(teamOperation)
+        
+        
+        
+        // Gather URLRequest for data task
+        let playersRequest = RequestFactory.getPlayers()
+        // Create network operation for data task
+        playerOperation = NetworkOperation<[Player]>(request: playersRequest)
+        
+        // Create an operation to save the players with Core Data
+        let savePersistentPlayersOperation = SavePersistentPlayersOperation()
+        savePersistentPlayersOperation.addDependency(playerOperation)
+        
+        let operations: [Operation] = [teamOperation,
+                          savePersistentTeamsOperation,
+                          playerOperation,
+                          savePersistentPlayersOperation]
+        
+        queue.addOperations(operations, waitUntilFinished: false)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -70,6 +108,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
+        container.viewContext.automaticallyMergesChangesFromParent = true
         return container
     }()
 

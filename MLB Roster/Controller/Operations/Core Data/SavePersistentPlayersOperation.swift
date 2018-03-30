@@ -50,11 +50,6 @@ class SavePersistentPlayersOperation: CoreDataOperation {
             return
         }
         
-        // Verify that players is not nil
-        guard let players = players else {
-            return
-        }
-        
         // Create the NSManagedObjects
         for player in players {
             // Create a new player, or merge with the existing player, on the current background context

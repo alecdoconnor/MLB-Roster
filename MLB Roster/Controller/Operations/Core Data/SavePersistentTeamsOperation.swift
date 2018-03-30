@@ -50,11 +50,6 @@ class SavePersistentTeamsOperation: CoreDataOperation {
             return
         }
         
-        // Verify that teams is not nil
-        guard let teams = teams else {
-            return
-        }
-        
         // Create the NSManagedObjects
         for team in teams {
             // Create a new team, or merge with the existing team, on the current background context
